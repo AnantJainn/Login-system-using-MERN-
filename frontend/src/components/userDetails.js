@@ -28,10 +28,7 @@ export default class UserDetails extends Component {
   }
   render() {
     return (
-      <div>
-        Name<h1>{this.state.userData.fname}</h1>
-        Email <h1>{this.state.userData.email}</h1>
-      </div>
+        <a href="./documentation/index.html">Doc</a>
     );
   }
 }

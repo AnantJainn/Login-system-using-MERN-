@@ -12,7 +12,7 @@ const JWT_SECRET =
   "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
 
 const mongoUrl =
-  "mongodb+srv://samyakghagargunde:Samyak123@ecommerce.2xdgd.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://test:IYFNNYAla5i2tuIk@cluster0.ixgvagy.mongodb.net/login?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoUrl, {
