@@ -32,7 +32,7 @@ export default class Login extends Component {
         if (data.status === "ok") {
           alert("login successful");
           window.localStorage.setItem("token", data.data);
-          window.location.href = "./hightouch-clone/server/index.js";
+          window.location.href = "https://app.gitbook.com/o/kzZT7GgNoi51kHQZabEJ/s/L9dx7MQshXYrK5YaiuJt/";
         }
       });
   }
