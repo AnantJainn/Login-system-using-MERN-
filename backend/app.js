@@ -5,14 +5,17 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 const bcrypt = require("bcryptjs");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
 
 const jwt = require("jsonwebtoken");
 
 const JWT_SECRET =
-  "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
-
-const mongoUrl =
-  "mongodb+srv://test:IYFNNYAla5i2tuIk@cluster0.ixgvagy.mongodb.net/login?retryWrites=true&w=majority";
+  process.env.JWT_SECRET_ID;
+const mongoUrl = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
 
 mongoose
   .connect(mongoUrl, {
@@ -81,7 +84,7 @@ app.post("/userData", async (req, res) => {
       .catch((error) => {
         res.send({ status: "error", data: error });
       });
-  } catch (error) {}
+  } catch (error) { }
 });
 
 app.listen(5000, () => {
